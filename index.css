@@ -1,3 +1,42 @@
 .corps {
-    padding: 50px;
+    padding: 0px 50px 50px 50px;
+    background-color: #f5f5f5;
+}
+
+#bande{
+    background-color: beige;
+    height: 100px;
+    margin-top: 25px;
+    margin-bottom: 50px;
+    border-radius: 5px;
+}
+
+#logo{
+    margin-left: 25px;
+    border-radius: 50px;
+}
+
+#entree{
+    border: solid gray;
+    border-radius: 25px;
+    background-color: rgb(255, 255, 243);
+    top: 10px;
+}
+
+#btn {
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    background-color: #f5f5f5;
+    border-color: black;
+    border-radius: 50px;
+}
+
+#inputx{
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+#inputy{
+    border-radius: 10px;
+    margin-bottom: 5px;
 }

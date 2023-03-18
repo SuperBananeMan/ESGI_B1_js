@@ -7,19 +7,32 @@
 		initial-scale="1.0">
 		<link rel="stylesheet" href="index.css">
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-		<!--<link rel="icon" type="image/x-icon" href="icon.png">-->
+		<link rel="icon" type="image/x-icon" href="./image/icon.png">
 		<title>Index php</title>
 	</head>
 	
-	<body class="corps">
+	<body class="corps row">
+        <nav id="bande" class="navbar navbar-expand-lg">
+            <img id="logo" src="image/logo.png" alt="smily dog">
+        </nav>
 
-        <div id="container">
+        
+            <div id="entree" class="sticky-top col-md-3">
+                <p>Largeur maximale de l'image :</p>
+                <input type="number" id="inputx" value="1000">
+                <p>Longueur maximale de l'image :</p>
+                <input type="number" id="inputy" value="1000">
+                <br>
 
-            <button id="btn">Afficher les photos</button>
+                <button id="btn">Afficher les photos</button>
+            </div>
+            <div id="container-plus" class="col-md-9"></div>
 
-            <p id="contenu">Requêtes</p>
-            
-        </div>
+            <div id="container-plus-plus" class="col-md-3"></div>
+
+            <div id="container" class="col-md-9">
+                
+            </div>
 	<script src="index.js"></script>
 	</body>
 
