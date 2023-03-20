@@ -1,6 +1,6 @@
-# Demo_git
+# Dogs and foxes generation website
 
-Hello,
+## Hello,
 
 
 Welcome on my website.
