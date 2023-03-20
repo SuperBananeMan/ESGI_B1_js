@@ -1,6 +1,6 @@
 # Dogs and foxes generation website
 
-## Hello,
+## Hello
 
 
 Welcome on my website.
