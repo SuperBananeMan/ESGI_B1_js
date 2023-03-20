@@ -13,13 +13,36 @@
 	
 	<body class="corps row">
         <nav id="bande" class="navbar navbar-expand-lg">
+            <div id="nav_page" class="container row w-100">
+                <div class="col-md-6">
+                    <input type="button" id="renard" onclick="window.location.href='fox/fox.html'">
+                    <a href="https://randomfox.ca/?i=2" class="liens">Image d'origine</a>
+                </div>
+                <div class="col-md-6">
+                    <input type="button" id="chat" onclick="window.location.href='cat/cat.html'">
+                    <a href="https://cataas.com/cat/looking" class="liens">Image d'origine</a>
+                </div>
+            </div>
         </nav>
-
-        <input type="button" id="renard" onclick="window.location.href='fox/fox.html'">
-        <input type="button" id="chien" onclick="window.location.href='dog/dog.html'">
-        <input type="button" id="chat" onclick="window.location.href='cat/cat.html'">
         
-    <div>Copyright,used...</div>
+        <div id="entree" class="sticky-top col-md-3">
+            <p>Largeur maximale de l'image :</p>
+            <input type="number" id="inputx" value="1000">
+            <p>Longueur maximale de l'image :</p>
+            <input type="number" id="inputy" value="1000">
+            <br>
+
+            <button id="btn">Afficher les photos</button>
+        </div>
+        <div id="container-plus" class="col-md-9"></div>
+
+        <div id="container-plus-plus" class="col-md-3"></div>
+
+        <div id="container" class="col-md-9">
+            
+        </div>
+        
+    <footer class="centered" id="copyrights">Copyright &#169; 2023 SuperBananeMan except the images generated found here : <a href="https://random.dog/woof.json">https://random.dog/woof.json</a></footer>
 	<script src="index.js"></script>
 	</body>
 
