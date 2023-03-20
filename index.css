@@ -1,18 +1,20 @@
+/*Corps de la page*/
 body{
     overflow-x: hidden;
 }
 
 .corps {
     padding: 0px 50px 50px 50px;
-    background-color: #f5f5f5;
+    background-color: #e7eaef;
 }
 
+/*Nav bar avec logo*/
 #bande{
     background-color: rgb(203, 211, 218);
     padding: 0px;
     margin-top: 25px;
-    margin-bottom: 50px;
-    border-radius: 25px;
+    margin-bottom: 25px;
+    border-radius: 200px;
 }
 
 #nav_page{
@@ -24,39 +26,50 @@ body{
     background-image: url("image/renard.jpg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    width: 100%;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     margin-top: 20px;
-    margin-left: 10%;
-    border-radius: 10px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    border-radius: 50%;
 }
 
 #chien{
     background-image: url("image/chien.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    width: 100%;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     margin-top: 20px;
-    margin-left: 10%;
-    border-radius: 10px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    border-radius: 50%;
 }
 
-#chat{
-    background-image: url("image/chat.jpg");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    width: 100%;
-    height: 150px;
-    margin-top: 20px;
-    margin-left: 10%;
-    border-radius: 10px;
+.liens{ /*Boutons image d'origine*/
+    background-color: #f5f5f5;
+    border-color: black;
+    border-radius: 50px;
+    margin-left: 10px;
+}
+.liens:hover{
+    background-color: #d2d2d2;
 }
 
-.liens{
-    margin-left: 10%;
+/*Bouton vers l'autre page*/
+#direction_renard,#direction_chien{
+    width: 20%;
+    margin-left: 40%;
+    margin-bottom: 25px;
+    background-color: #cee3fb;
+    border-color: black;
+    border-radius: 50px;
+}
+#direction_renard:hover,#direction_chien:hover{
+    background-color: #b7cadf;
 }
 
+/*Cadre dimensions et génération de l'image*/
 #entree{
     border: solid gray;
     border-radius: 25px;
@@ -72,7 +85,11 @@ body{
     border-color: black;
     border-radius: 50px;
 }
+#btn:hover{
+    background-color: #d0d0d0;
+}
 
+/*Dimensions de l'image*/
 #inputx{
     border-radius: 10px;
     margin-bottom: 5px;
@@ -83,7 +100,7 @@ body{
 }
 
 
-
+/*footer avec copyrights et lien vers le site/json*/
 #copyrights{
     background-color: rgb(203, 211, 218);
     border-radius: 10px;

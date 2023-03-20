@@ -1,76 +1,47 @@
 const bouton = document.getElementById("btn")
-let a_link = document.createElement("a")
-let saut_ligne = document.createElement("br")
 let input_x = document.getElementById("inputx")
 let input_y = document.getElementById("inputy")
 
-let img
-let video
+//Création de balises HTML
+let site_link = document.createElement("a")
+let a_link = document.createElement("a")
+let saut_ligne = document.createElement("br")
+let img = document.createElement('img')
 
 function fetchPhotos(){
-    return fetch("https://random.dog/woof.json")
+    return fetch("https://randomfox.ca/floof/") //API
 }
 
 bouton.addEventListener("click",function(){
     const carApi = fetchPhotos().then((httpResponse) => {
         return httpResponse.json()
     }).then((data)=>{
-        const divBody = document.getElementById("container")
-        const taille = data.fileSizeBytes
-        a_link.href = data.url
-        a_link.append(data.url)
-        console.log(isImage(data.url))
-        if (isImage(data.url) == true){
-            img = document.createElement('img')
-            img.src = data.url
-            img.style = "max-width:" + input_x.value + "px;max-height:" + input_y.value + "px;"
-        }else if (isImage(data.url) == false) {
-            video = document.createElement('video')
-            video.width = input_x.value/2
-            video.length = input_y.value/2
-            video.setAttribute("controls","controls")
+        const divBody = document.getElementById("container") //Représente le paragraphe qui va contenir les éléments
 
-            let source = document.createElement('source')
-            source.src = data.url
-            source.type = "video/mp4"
-            source.type = "video/webm"
-            video.append(source)
-            video.append("Your browser does not support the video.")
-        }
-        const newText = "<p>La taille de l'image est de " + taille + ' bytes.</p>'
+        site_link.href = data.link //Ajoute le lien du site vers l'image
+        site_link.append(data.link)
+         
+        a_link.href = data.image //Ajoute le lien de l'image
+        a_link.append(data.image)
+
+        img.src = data.image //Ajoute l'image
+        img.style = "max-width:" + input_x.value + "px;max-height:" + input_y.value + "px;" + "margin-bottom:25px;" //CSS de l'image
+
+        //Ajout de tous les éléments dans la div
+        divBody.append(site_link)
+        divBody.append(saut_ligne)
+        divBody.innerHTML += ""
         divBody.append(a_link)
         divBody.append(saut_ligne)
-        if(img == undefined){
-            divBody.append(video)
-            console.log(divBody)
-        }else{
-            divBody.append(img)
-        }
-        divBody.innerHTML += newText
+        divBody.innerHTML += ""
+        divBody.append(img)
+        divBody.append(saut_ligne)
+        divBody.innerHTML += ""
 
+        //Réinitialise les liens
+        site_link.innerHTML = ''
+        site_link.innerText = ""
         a_link.innerHTML = ''
         a_link.innerText = ""
-        if(img == undefined){
-            video = undefined
-        }else{
-            img = undefined
-        }
     })
 })
-
-
-
-
-
-function getExtension(filename) {
-    let parts = filename.split('.')
-    return parts[parts.length - 1]
-  }
-  
-function isImage(filename) {
-     ext = getExtension(filename)
-     if (ext == "mp4" || ext == "webm"){
-        return false
-     }
-     return true
-}
